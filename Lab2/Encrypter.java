@@ -1,5 +1,7 @@
 package Lab2;
 
+import javax.swing.*;
+
 public class Encrypter {
     public static String encrypterRowColum(String plaintext, int numColumns){
         int numRows;
@@ -18,15 +20,20 @@ public class Encrypter {
 
         String[][] cipherGrid = new String[numRows][numColumns];
 
+        int k = 0;
         for(int i = 0; i < numRows; i++)
-            for(int j = 0; j < numColumns; j++)
-                cipherGrid[i][j] = String.valueOf(plaintext.charAt(i+j));
+            for(int j = 0; j < numColumns; j++){
+                cipherGrid[i][j] = String.valueOf(plaintext.charAt(k));
+                k++;
+            }
 
         for(int i = 0; i < numColumns; i++)
             for(int j = 0; j < numRows; j++)
-                cipherText += cipherGrid[i][j];
+                cipherText += cipherGrid[j][i];
 
         // For test purposes
+        JOptionPane.showMessageDialog(null,cipherGrid,"Test", JOptionPane.INFORMATION_MESSAGE);
+        System.out.println(plaintext);
         System.out.println(cipherText);
 
         return cipherText;
