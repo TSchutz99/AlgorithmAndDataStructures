@@ -11,5 +11,7 @@ public class TestEncrypter {
 
         JOptionPane.showMessageDialog(null, cipherText, "Encrypted Text",
                 JOptionPane.INFORMATION_MESSAGE);
+
+        Encrypter.decryptRowColumn(cipherText, 5);
     }
 }
