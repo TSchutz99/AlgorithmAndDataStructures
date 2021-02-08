@@ -36,7 +36,7 @@ public class Encrypter {
         //System.out.println(plaintext);
         //System.out.println(cipherText);
 
-        return cipherText.replaceAll("(.{" + numColumns + "})", "$1 ").trim();
+        return cipherText.replaceAll("(.{" + 5 + "})", "$1 ").trim();
     }
 
     public static String decryptRowColumn(String cipherText, int numColumns)
@@ -63,8 +63,6 @@ public class Encrypter {
         for(int i = 0; i < numRows; i++)
             for(int j = 0; j < numColumns; j++)
                 plaintext += cipherGrid[i][j];
-
-        System.out.println(plaintext);
 
         return plaintext;
     }
