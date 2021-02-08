@@ -32,10 +32,10 @@ public class Encrypter {
                 cipherText += cipherGrid[j][i];
 
         // For test purposes
-        JOptionPane.showMessageDialog(null,cipherGrid,"Test", JOptionPane.INFORMATION_MESSAGE);
-        System.out.println(plaintext);
-        System.out.println(cipherText);
+        //JOptionPane.showMessageDialog(null,cipherGrid,"Test", JOptionPane.INFORMATION_MESSAGE);
+        //System.out.println(plaintext);
+        //System.out.println(cipherText);
 
-        return cipherText;
+        return cipherText.replaceAll("(.{" + numColumns + "})", "$1 ").trim();
     }
 }
