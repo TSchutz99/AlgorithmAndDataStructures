@@ -7,9 +7,9 @@ public class TestEncrypter {
         // Input used for test purpose 'This is a secret Message dude'
         String plainText = JOptionPane.showInputDialog("Please input some text to be encrypted:");
 
-        String encryptedText = Encrypter.encrypterRowColum(plainText, 5);
+        String cipherText = Encrypter.encrypterRowColum(plainText, 5);
 
-        JOptionPane.showMessageDialog(null, encryptedText, "Encrypted Text",
+        JOptionPane.showMessageDialog(null, cipherText, "Encrypted Text",
                 JOptionPane.INFORMATION_MESSAGE);
     }
 }
