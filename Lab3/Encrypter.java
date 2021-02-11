@@ -48,7 +48,6 @@ public class Encrypter {
             plainText.append(ch);
         }
 
-
         return plainText.toString();
     }
 }
