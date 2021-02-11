@@ -7,7 +7,7 @@ public class Encrypter {
         int numRows;
         StringBuilder cipherText = new StringBuilder("");
 
-        plaintext = plaintext.replace(" ", "");
+        plaintext = plaintext.toUpperCase().replace(" ", "");
 
         if(plaintext.length() % (float)numColumns != 0){
             numRows = (int)Math.ceil(plaintext.length() / (float)numColumns);
