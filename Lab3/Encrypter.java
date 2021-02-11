@@ -7,8 +7,8 @@ public class Encrypter {
         StringBuilder cipherText = new StringBuilder("");
         plaintext = plaintext.toUpperCase().replace(" ","");
 
-        if(offset >= 26){
-            offset = Integer.parseInt(JOptionPane.showInputDialog("Offset must be less then 26, Please reenter:"));
+        while(offset >= 26){
+            offset = Integer.parseInt(JOptionPane.showInputDialog("Offset must be less then 26, Please re-enter:"));
         }
 
         char ch;
@@ -31,8 +31,8 @@ public class Encrypter {
         StringBuilder plainText = new StringBuilder("");
         cipherText = cipherText.replace(" ", "");
 
-        if(offset >= 26){
-            offset = Integer.parseInt(JOptionPane.showInputDialog("Offset must be less then 26, Please reenter:"));
+        while(offset >= 26){
+            offset = Integer.parseInt(JOptionPane.showInputDialog("Offset must be less then 26, Please re-enter:"));
         }
 
         char ch;
