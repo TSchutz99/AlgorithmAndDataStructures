@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Encrypter {
     public static String encrypterRowColum(String plaintext, int numColumns){
         int numRows;
-        String cipherText = "";
+        StringBuilder cipherText = new StringBuilder("");
 
         plaintext = plaintext.replace(" ", "");
 
@@ -29,20 +29,20 @@ public class Encrypter {
 
         for(int i = 0; i < numColumns; i++)
             for(int j = 0; j < numRows; j++)
-                cipherText += cipherGrid[j][i];
+                cipherText.append(cipherGrid[j][i]);
 
         // For test purposes
         //JOptionPane.showMessageDialog(null,cipherGrid,"Test", JOptionPane.INFORMATION_MESSAGE);
         //System.out.println(plaintext);
         //System.out.println(cipherText);
 
-        return cipherText.replaceAll("(.{" + 5 + "})", "$1 ").trim();
+        return cipherText.toString().replaceAll("(.{" + 5 + "})", "$1 ").trim();
     }
 
     public static String decryptRowColumn(String cipherText, int numColumns)
     {
         int numRows;
-        String plaintext = "";
+        StringBuilder plaintext = new StringBuilder("");
 
         cipherText = cipherText.replace(" ", "");
 
@@ -62,8 +62,8 @@ public class Encrypter {
 
         for(int i = 0; i < numRows; i++)
             for(int j = 0; j < numColumns; j++)
-                plaintext += cipherGrid[i][j];
+                plaintext.append(cipherGrid[i][j]);
 
-        return plaintext;
+        return plaintext.toString();
     }
 }
