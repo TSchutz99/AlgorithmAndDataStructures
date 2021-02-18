@@ -1,4 +1,4 @@
-package Lab2;
+package Lab2_RowColumnTransposition;
 
 import javax.swing.*;
 

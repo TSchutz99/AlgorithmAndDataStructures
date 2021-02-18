@@ -1,6 +1,4 @@
-package Lab2;
-
-import javax.swing.*;
+package Lab2_RowColumnTransposition;
 
 public class Encrypter {
     public static String encrypterRowColum(String plaintext, int numColumns){
